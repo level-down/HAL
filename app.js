@@ -4,7 +4,7 @@ const fs = require("fs");
 
 // Let's extend the client object with these.
 client.config = require("./config/config.json");
-client.commands = JSON.parse(fs.readFileSync("./config/commands.json", 'utf8'));
+client.commands = require("./config/commands.json");
 
 fs.readdir("./events/", (err, files) => {
     if (err) return console.error(err);
