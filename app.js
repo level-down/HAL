@@ -1,9 +1,10 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require("fs");
-const containsDenyListWord = require("./tools/containsDenyListWord.js")
-let commands = []
 client.config = require("./config/config.json");
+const containsDenyListWord = require("./tools/containsdenylistword.js")
+const denyListViolation = require("./handlers/denylistviolation.js")
+let commands = []
 
 fs.readdir("./commands/", (err, files) => {
     if (err) return console.error(err);
@@ -28,16 +29,7 @@ client.on("message", message => {
     if (message.author.bot) return;
 
     if (!message.content.startsWith(`${client.config.prefix} `)) {
-        if (containsDenyListWord(message)){
-            client.channels.cache.get(client.config.archiveChannel).send(`${message.author.username} sent "${message.content}" to ${message.channel.name}`)
-            message.delete()
-            message.channel.send({
-                embed:{
-                    description: "🚨 ALERT: A message has been flagged by HAL as containing words in the denylist and has been redirected to #denylist-infractions",
-                    color: 13385801
-                }
-            })
-        } 
+        if (containsDenyListWord(message)) denyListViolation(client, message);
         return
     };
 
