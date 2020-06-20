@@ -1,0 +1,27 @@
+{
+  "name": "hal",
+  "version": "1.0.0",
+  "description": "Human Action Listener",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/level-down/HAL.git"
+  },
+  "keywords": [
+    "discord",
+    "bot"
+  ],
+  "author": "level-down",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/level-down/HAL/issues"
+  },
+  "homepage": "https://github.com/level-down/HAL#readme",
+  "dependencies": {
+    "@octokit/rest": "^18.0.0",
+    "discord.js": "^12.2.0"
+  }
+}

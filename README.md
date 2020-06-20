@@ -1,9 +1,32 @@
-# discord.js-skeleton
-A probably wrong and terrible skeleton layout of a Discord.js bot.
+# HAL
 
+HAL is our organization's discord bot! 
 
-I wrote this largely, and by largely I mean some parts are copy and pasted from, this guide: https://www.gitbook.com/book/yorkaargh/discord-js-bot-guide/details
+Initial functionality roadmap
+- detection and flagging of deprecated language in public channels
+- notify the chat on new issues/PRs
+- anonymous reporting of CoC violations
 
-I create bots far to often when I am bored so this just helps me jumpstart them. 
+### Development
 
-Nothing fancy, nothing special, nothing pretty.
+Create a file called `config.json` in the `config` directory with the following structure:
+
+```
+{
+	"token": "<from bot tab of discord application>",
+	"prefix": "<name of bot for command invocation>"
+}
+```
+
+Create a file called `denylist.json` in the `config` directory with the following structure:
+
+```
+[
+  "badword",
+  "anotherbadword"
+]
+```
+
+Populate it with any words you don't want allowed in chat. 
+
+run `npm install` and `node app.js` to start the bot.
