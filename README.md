@@ -15,6 +15,7 @@ Create a file called `config.json` in the `config` directory with the following 
 {
 	"token": "<from bot tab of discord application>",
 	"prefix": "<name of bot for command invocation>"
+  "archiveChannel" "<id of channel where you want to archive denyList messages>"
 }
 ```
 

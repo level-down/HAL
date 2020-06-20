@@ -29,7 +29,7 @@ client.on("message", message => {
 
     if (!message.content.startsWith(`${client.config.prefix} `)) {
         if (containsDenyListWord(message)){
-            client.channels.cache.get('724022625386496031').send(`${message.author.username} sent "${message.content}" to ${message.channel.name}`)
+            client.channels.cache.get(client.config.archiveChannel).send(`${message.author.username} sent "${message.content}" to ${message.channel.name}`)
             message.delete()
             message.channel.send({
                 embed:{
