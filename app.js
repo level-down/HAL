@@ -48,4 +48,8 @@ client.on("message", message => {
     }
 });
 
+client.on("messageUpdate", function(oldMessage, newMessage){
+    if (containsDenyListWord(newMessage)) denyListViolation(client, newMessage);
+});
+
 client.login(client.config.token);
