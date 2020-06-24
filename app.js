@@ -34,6 +34,7 @@ client.on("message", message => {
     };
 
     const userInput = message.content.slice(client.config.prefix.length + 1).split(" ");
+
     const command = userInput[0]
     const args = userInput.slice(1)
 
@@ -53,3 +54,11 @@ client.on("messageUpdate", function(oldMessage, newMessage){
 });
 
 client.login(client.config.token);
+
+
+function cl(arg){
+    console.log(arg)
+}
+
+let rps = require(`./commands/rps.js`)
+// rps.run("client", "@someone", "args")
