@@ -54,11 +54,3 @@ client.on("messageUpdate", function(oldMessage, newMessage){
 });
 
 client.login(client.config.token);
-
-
-function cl(arg){
-    console.log(arg)
-}
-
-let rps = require(`./commands/rps.js`)
-// rps.run("client", "@someone", "args")
