@@ -34,6 +34,7 @@ client.on("message", message => {
     };
 
     const userInput = message.content.slice(client.config.prefix.length + 1).split(" ");
+
     const command = userInput[0]
     const args = userInput.slice(1)
 
