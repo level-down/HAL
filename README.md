@@ -6,6 +6,7 @@ Initial functionality roadmap
 - detection and flagging of deprecated language in public channels
 - notify the chat on new issues/PRs
 - anonymous reporting of CoC violations
+- allowing users to rock-paper-scissors their fellow discorders
 
 ### Development
 
